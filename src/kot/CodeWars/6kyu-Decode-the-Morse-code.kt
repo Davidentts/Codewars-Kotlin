@@ -2,8 +2,7 @@ package kot.CodeWars
 
 fun decodeMorse(code: String): String {
     val listStr = code
-        .trim(' ')
-        .trimEnd(' ')
+        .trim()
         .replace("   ", "  ")
         .split(" ")
     var result = ""
@@ -12,7 +11,7 @@ fun decodeMorse(code: String): String {
             result = "$result "
             continue
         }
-        result = "$result${MorseCode[str] ?: ""}"
+            result = "$result${MorseCode[str] ?: ""}"
     }
     return result
 }
